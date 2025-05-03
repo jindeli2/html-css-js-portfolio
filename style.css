@@ -1,0 +1,260 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+} 
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}    
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;    /* This height is in vh units, which is relative to the viewport height. 17% of total screen height */
+}
+
+.nav-links {
+    gap: 2rem;      /* This gap is in rem units, which is relative to the font size of the root element. 2rem is equal to 32px if the root font size is 16px */
+    list-style: none; /* Removes the default bullet points from list items */
+    font-size: 1.5rem; /* Sets the font size of the list items to 1.5 times the base font size */
+}
+
+a {
+    color: black; /* Sets the text color of links to black */
+    text-decoration: none; /* Removes the underline from links */
+    text-decoration-color: white; /* Sets the underline color to white */
+}
+
+a:hover {
+    color: gray; /* Changes the text color to gray when hovered over */
+    text-decoration: underline; /* Adds an underline when hovered over */
+    text-underline-offset: 1rem; /* Adds an offset to the underline when hovered over */
+    text-decoration-color: rgb(181, 181, 181); /* Sets the underline color to a light gray when hovered over */
+}
+
+.logo {
+    font-size: 2rem; /* Sets the font size of the logo to 2 times the base font size */
+}
+
+.logo:hover {
+    cursor: default; /* Changes the cursor to default when hovering over the logo */
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none; /* Hides the hamburger menu by default */
+}
+
+.hamburger-menu {
+    position: relative; /* Sets the position to relative for positioning child elements */
+    display: inline-block; /* Displays the hamburger menu as an inline block element */
+}
+
+.hamburger-icon {
+    display:flex; /* Displays the hamburger icon as a flex container */
+    flex-direction: column; /* Arranges child elements in a column */
+    justify-content: space-between; /* Distributes space between child elements */
+    height: 24px;
+    width: 30px;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the hamburger icon */
+}
+
+.hamburger-icon span {
+    width: 100%; /* Sets the width of each span to 100% of the parent element */
+    height: 2px; /* Sets the height of each span to 2px */
+    background-color: black; /* Sets the background color of each span to black */
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute; /* Sets the position to absolute for positioning relative to the nearest positioned ancestor */
+    top: 100%; /* Positions the menu links below the hamburger icon */
+    right: 0; /* Aligns the menu links to the right of the hamburger icon */
+    background-color: white; /* Sets the background color of the menu links to white */
+    width: fit-content; /* Sets the width to fit the content */
+    max-height: 0;
+    overflow: hidden; /* Hides overflow content */
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block; /* Displays each link as a block element */
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem; /* Sets the font size of the links to 1.5 times the base font size */
+    color: black; /* Sets the text color of the links to black */
+    text-decoration: none; /* Removes the underline from links */
+    transition: all 0.3 ease-in-out; /* Adds a transition effect to the links */
+}
+
+.menu-links li {
+    list-style: none; /* Removes the default bullet points from list items */
+}
+
+.menu-links.open {
+    max-height: 300px; /* Sets a maximum height for the menu links when open */
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px); /* Rotates and translates the first span when the hamburger icon is open */
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0; /* Hides the second span when the hamburger icon is open */
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px); /* Rotates and translates the first span when the hamburger icon is open */
+}
+
+.hamburger-icon span:first-child {
+    transform: none; /* Resets the transform property of the first span */
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1; /* Sets the opacity of the first span to 1 */
+}
+
+.hamburger-icon span:first-child {
+    transform: none; /* Resets the transform property of the first span */
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin: auto 0; 
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;;
+}
+
+.section__text__p2 {
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;;
+}
+
+.btn-color-1, .btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover, .btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1, .btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
